@@ -1,26 +1,56 @@
 .card {
-max-width: 300px;
-     min-height: 250px;
-     background: #673ab7;
-     padding: 30px;
-      border-radius: 3px;
-     color: #FFF;
-     margin:20px;
-    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
-     transition: transform 0.3s ease, box-shadow 0.3s ease; 
- .card-title{
+  max-width: 300px;
+  height: 100%;
+  border-radius: 3px;
+  color: #fff;
+  box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
+    rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 3px;
+
+  }
+
+  .card-body{
+     padding: 1rem;
+  }
+  .card-title {
     font-size: 20px;
-     font-weight: 600;
-     letter-spacing: 1.2px;
-     margin: 1rem 0;
-}
- .card-content{
-     font-size: 14px;
-     letter-spacing: 0.5px;
-     line-height: 1.5;
-}
-&:hover {
-  transform: scale(1.05); /* Agrandit légèrement la carte */
-}
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin: 1rem 0;
+  }
+  .card-content {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+input[type="text"], button {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: solid 2px #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 90%;
 }
 
+button{
+     background-color: transparent;
+     color: #fff;
+
+}
+
+button:hover {
+     background-color: #0000005a;  
+}
+}

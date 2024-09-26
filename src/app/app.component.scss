@@ -1,5 +1,29 @@
-.card-container {
+.cards-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+}
+app-article {
+  border-radius: 3px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 250px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+app-article:nth-child(3n + 1) {
+  background-color: #02b875; /* Couleur pour la 1ère, 4ème, 7ème, etc. */
+}
+
+app-article:nth-child(3n + 2) {
+  background-color: #4181ee; /* Couleur pour la 2ème, 5ème, 8ème, etc. */
+}
+
+app-article:nth-child(3n + 3) {
+  background-color: #673ab7; /* Couleur pour la 3ème, 6ème, 9ème, etc. */
 }

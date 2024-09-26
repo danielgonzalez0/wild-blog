@@ -1,8 +1,15 @@
 <div class="card">
-  <h2 class="card-title">Titre de mon article</h2>
-  <p class="card-content">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam odio illo
-    commodi odit atque veniam ipsam quasi! Quos, iste incidunt.
-  </p>
+  <img [src]="article.image" [alt]="article.title">
+  <div class="card-body">
+    <h2 class="card-title">{{article.title}}</h2>
+    @if(article.isPublished){
+      <p class="card-content">{{article.content}}</p>
+      <p>{{article.comment}}</p>
+    } 
+  <input [(ngModel)]="article.comment" type="text" placeholder="saisir un commentaire">
+  <button (click)="togglePublication()">
+    Publier / Dépublier l'article
+  </button>
 </div>
+
   
