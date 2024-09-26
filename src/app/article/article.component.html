@@ -1,15 +1,18 @@
 <div class="card">
-  <img [src]="article.image" [alt]="article.title">
+  <img [src]="article.image" [alt]="article.title" />
   <div class="card-body">
-    <h2 class="card-title">{{article.title}}</h2>
+    <h2 class="card-title">{{ article.title }}</h2>
     @if(article.isPublished){
-      <p class="card-content">{{article.content}}</p>
-      <p>{{article.comment}}</p>
-    } 
-  <input [(ngModel)]="article.comment" type="text" placeholder="saisir un commentaire">
+    <p class="card-content">{{ article.content }}</p>
+    <p>{{ article.comment }}</p>
+    }
+  </div>
+  <input
+    [(ngModel)]="article.comment"
+    type="text"
+    placeholder="saisir un commentaire"
+  />
   <button (click)="togglePublication()">
-    Publier / Dépublier l'article
+    {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
   </button>
 </div>
-
-  

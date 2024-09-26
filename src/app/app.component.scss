@@ -4,6 +4,13 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.popular-article {
+  font-size: 1.1em;
+  text-shadow: 2px 2px 5px gray;
+  font-weight: bold;
+}
+
 app-article {
   border-radius: 3px;
   flex: 1 1 300px;
