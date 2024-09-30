@@ -24,7 +24,6 @@ export class ArticleComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.articleId = Number(params.get('id'));
-      console.log(this.articleId);
 
       if (this.articleId) {
         this.article = this.articles.find(
