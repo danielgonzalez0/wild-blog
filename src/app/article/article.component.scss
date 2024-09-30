@@ -1,11 +1,18 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .card {
-  max-width: 300px;
+  width: 600px;
   height: 100%;
   border-radius: 3px;
   color: #fff;
   box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
     rgb(0 0 0 / 30%) 0px 18px 36px -18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
 
   img{
      width: 100%;

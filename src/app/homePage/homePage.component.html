@@ -1,23 +1,10 @@
 <ul class="cards-container">
   @for(article of articles; track article?.id) { @if(article){
   <li class="card">
-    <img [src]="article?.image" [alt]="article.title" />
     <div class="card-body">
       <h2 class="card-title">{{ article.title }}</h2>
-      @if(article.isPublished){
-      <p class="card-content">{{ article.content }}</p>
-      <p>{{ article.comment }}</p>
-      }
     </div>
-
-    <input
-      [(ngModel)]="article.comment"
-      type="text"
-      placeholder="saisir un commentaire"
-    />
-    <button (click)="togglePublication(article)">
-      {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
-    </button>
+    <a [routerLink]="['/article', article.id]" class="btn">Voir l'article</a>
   </li>
   } } @empty {
   <li>Aucun article</li>

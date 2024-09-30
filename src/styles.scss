@@ -16,17 +16,17 @@ text-align: center;
 
 //je ne connais pas encore les inputs outpouts
 .card {
-  max-width: 300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // height: 100%;
-  // min-height: 450px;
+  height: 100%;
   border-radius: 3px;
   color: #fff;
   box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
     rgb(0 0 0 / 30%) 0px 18px 36px -18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
 
   img{
      width: 100%;
@@ -44,7 +44,7 @@ text-align: center;
     font-weight: 600;
     letter-spacing: 1.2px;
     margin: 1rem 0;
-    min-height: 50px;
+    min-height: 45px;
   }
   .card-content {
     font-size: 14px;
@@ -55,7 +55,7 @@ text-align: center;
     overflow: hidden;
   }
 
-input[type="text"], button {
+input[type="text"], button, .btn {
   display: block;
   margin: 0.5rem auto;
   padding: 0.5rem 1rem;
@@ -66,15 +66,20 @@ input[type="text"], button {
   width: 90%;
 }
 
-button{
+button, .btn{
      background-color: transparent;
      color: #fff;
 
 }
 
-button:hover {
+button:hover, .btn:hover {
      background-color: #0000005a;  
 }
+.btn{
+  text-align: center;
+  font-size: 14px;
+}
+
 }
 .card:nth-child(3n + 1) {
   background-color: #02b875; /* Couleur pour la 1ère, 4ème, 7ème, etc. */

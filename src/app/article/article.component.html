@@ -1,18 +1,25 @@
-<li class="card">
-  <img [src]="article.image" [alt]="article.title" />
-  <div class="card-body">
-    <h2 class="card-title">{{ article.title }}</h2>
-    @if(article.isPublished){
-    <p class="card-content">{{ article.content }}</p>
-    <p>{{ article.comment }}</p>
-    }
+@if(article){
+  <div class="container">
+    <div class="card">
+      <img [src]="article.image" [alt]="article.title" />
+      <div class="card-body">
+        <h2 class="card-title">{{ article.title }}</h2>
+        @if(article.isPublished){
+        <p class="card-content">{{ article.content }}</p>
+        <p>{{ article.comment }}</p>
+        }
+      </div>
+      <input
+        [(ngModel)]="article.comment"
+        type="text"
+        placeholder="saisir un commentaire"
+      />
+      <button (click)="togglePublication()">
+        {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
+      </button>
+      <a [routerLink]="['/']" class="btn">Retour à l'accueil</a>
+    </div>
   </div>
-  <input
-    [(ngModel)]="article.comment"
-    type="text"
-    placeholder="saisir un commentaire"
-  />
-  <button (click)="togglePublication()">
-    {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
-  </button>
-</li>
+} @else {
+<app-notFound />
+}
