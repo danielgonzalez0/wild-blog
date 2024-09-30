@@ -1,21 +1,2 @@
 <h1>{{ title }}</h1>
-<ul class="cards-container">
-  @for(article of articles; track article?.id){ 
-    @if(article?.isPublished){
-  <li [ngClass]="{ 'popular-article': article && article.likes > 150 }">
-    <img [src]="article?.image" [alt]="article?.title" />
-    <h3>{{ article?.title }}</h3>
-    <p>auteur: {{ article?.author }}</p>
-    <p>{{ article?.content }}</p>
-    <span
-      [ngStyle]="{
-        color: article && article.likes > 170 ? '#02b875' : '#673ab7'
-      }"
-      >likes: {{ article?.likes }}</span
-    >
-  </li>
-  } 
-}@empty {
-  <li>Aucun article publié</li>
-  }
-</ul>
+<app-home-page/>

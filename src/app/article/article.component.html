@@ -1,4 +1,4 @@
-<div class="card">
+<li class="card">
   <img [src]="article.image" [alt]="article.title" />
   <div class="card-body">
     <h2 class="card-title">{{ article.title }}</h2>
@@ -15,4 +15,4 @@
   <button (click)="togglePublication()">
     {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
   </button>
-</div>
+</li>
