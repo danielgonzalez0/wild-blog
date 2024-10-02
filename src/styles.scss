@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-   @import url('https://fonts.googleapis.com/css?family=Roboto');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
-h1{
-padding: 2rem;
-text-align: center;
+h1 {
+  padding: 2rem;
+  text-align: center;
 }
 
 //je ne connais pas encore les inputs outpouts
@@ -27,16 +27,17 @@ text-align: center;
     rgb(0 0 0 / 30%) 0px 18px 36px -18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding-bottom: 20px;
+    background-color: #02b875; 
 
-  img{
-     width: 100%;
-     height: 200px;
-     object-fit: cover;
-     border-radius: 3px;
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
   }
 
-  .card-body{
-     padding: 1rem;
+  .card-body {
+    padding: 1rem;
   }
   .card-title {
     font-size: 16px;
@@ -54,40 +55,32 @@ text-align: center;
     overflow: hidden;
   }
 
-input[type="text"], button, .btn {
-  display: block;
-  margin: 0.5rem auto;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  border: solid 2px #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 90%;
+  input[type="text"],
+  button,
+  .btn {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: solid 2px #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+  }
+
+  button,
+  .btn {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  button:hover,
+  .btn:hover {
+    background-color: #0000005a;
+  }
+  .btn {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
-button, .btn{
-     background-color: transparent;
-     color: #fff;
-
-}
-
-button:hover, .btn:hover {
-     background-color: #0000005a;  
-}
-.btn{
-  text-align: center;
-  font-size: 14px;
-}
-
-}
-.card:nth-child(3n + 1) {
-  background-color: #02b875; /* Couleur pour la 1ère, 4ème, 7ème, etc. */
-}
-
-.card:nth-child(3n + 2) {
-  background-color: #4181ee; /* Couleur pour la 2ème, 5ème, 8ème, etc. */
-}
-
-.card:nth-child(3n + 3) {
-  background-color: #673ab7; /* Couleur pour la 3ème, 6ème, 9ème, etc. */
-}

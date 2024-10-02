@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ArticleComponent } from './article/article.component';
-import { Article } from '../interface/Article';
+import { ArticleComponent } from './components/article/article.component';
 import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './homePage/homePage.component';
+import { HomePageComponent } from './pages/homePage/homePage.component';
+
 
 @Component({
   selector: 'app-root',
@@ -14,5 +14,4 @@ import { HomePageComponent } from './homePage/homePage.component';
 })
 export class AppComponent {
   title = 'Bienvenue sur le Wild Blog de Daniel !';
-
 }

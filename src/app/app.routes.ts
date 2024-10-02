@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomePageComponent } from './homePage/homePage.component';
-import { NotFoundComponent } from './notFound/notFound.component';
-import { ArticleComponent } from './article/article.component';
+
+import { NotFoundComponent } from './pages/notFound/notFound.component';
+import { ArticleComponent } from './components/article/article.component';
+import { HomePageComponent } from './pages/homePage/homePage.component';
 
 export const routes: Routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'article/:id', component: ArticleComponent},
-  {path:"**", component: NotFoundComponent}
+  { path: '', component: HomePageComponent },
+  { path: 'article/:id', component: ArticleComponent },
+  { path: '**', component: NotFoundComponent },
 ];

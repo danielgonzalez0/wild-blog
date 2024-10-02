@@ -1,13 +1,14 @@
 .cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-
 .card:nth-child(3n + 1) {
-  background-color: #b802b2; /* Couleur pour la 1ère, 4ème, 7ème, etc. */
+  background-color: #02b875; /* Couleur pour la 1ère, 4ème, 7ème, etc. */
 }
 
 .card:nth-child(3n + 2) {
@@ -17,3 +18,4 @@
 .card:nth-child(3n + 3) {
   background-color: #673ab7; /* Couleur pour la 3ème, 6ème, 9ème, etc. */
 }
+

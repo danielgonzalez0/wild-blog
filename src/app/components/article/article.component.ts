@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { articles } from '../data/articles';
+import { articles } from '../../data/articles';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
-import { Article } from '../../interface/Article';
-import { NotFoundComponent } from '../notFound/notFound.component';
+import { Article } from '../../../interface/Article';
+import { NotFoundComponent } from '../../pages/notFound/notFound.component';
 
 @Component({
   selector: 'app-article',
