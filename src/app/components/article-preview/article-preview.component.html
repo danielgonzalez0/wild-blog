@@ -3,4 +3,8 @@
     <h2 class="card-title">{{ article.title }}</h2>
   </div>
   <a [routerLink]="['/article', article.id]" class="btn">Voir l'article</a>
+  <button (click)="toggleLike()" class="btn">
+    {{ isLiked ? "retirer un like" : "ajouter un like" }}
+  </button>
+  <p>{{ article.likes }} likes</p>
 </div>

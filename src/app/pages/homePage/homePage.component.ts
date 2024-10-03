@@ -15,8 +15,10 @@ import { ArticlePreviewComponent } from "../../components/article-preview/articl
 })
 export class HomePageComponent {
   articles: (Article | null | undefined)[] = articles;
+notificationLike: string = '';
 
-  togglePublication(article: Article): void {
-    article.isPublished = !article.isPublished;
-  }
+handleNotifyLike(message: string) {
+    this.notificationLike = message;
+    alert(this.notificationLike);
+}
 }
