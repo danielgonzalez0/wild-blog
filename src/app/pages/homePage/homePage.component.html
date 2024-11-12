@@ -1,7 +1,10 @@
 <ul class="cards-container">
   @for(article of articles; track article?.id) { @if(article){
   <li class="card">
-    <app-article-preview [article]="article" (notifyLike)="handleNotifyLike($event)"/>
+    <app-article-preview
+      [article]="article"
+      (notifyLike)="handleNotifyLike($event)"
+    />
   </li>
   } } @empty {
   <li>Aucun article</li>
