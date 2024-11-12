@@ -8,7 +8,7 @@ import { HomePageComponent } from './pages/homePage/homePage.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ArticleComponent, HomePageComponent],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
