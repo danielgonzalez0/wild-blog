@@ -4,6 +4,8 @@ import { articles } from '../../data/articles';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { Article } from '../../../interface/Article';
 import { NotFoundComponent } from '../../pages/notFound/notFound.component';
+import { ArticlesService } from '../../services/articles.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-article',
@@ -19,18 +21,24 @@ export class ArticleComponent {
 
   articles: (Article | null | undefined)[] = articles;
 
-  route: ActivatedRoute = inject(ActivatedRoute);
+  private route: ActivatedRoute = inject(ActivatedRoute);
+  readonly ArticleService = inject(ArticlesService);
+  private articleSubscription!: Subscription;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.articleId = Number(params.get('id'));
-
-      if (this.articleId) {
-        this.article = this.articles.find(
-          (article) => article?.id === this.articleId
-        ) as Article;
-      }
     });
+
+    this.articleSubscription = this.ArticleService.getArticleById(
+      this.articleId
+    ).subscribe((data) => {
+      this.article = data;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.articleSubscription.unsubscribe();
   }
 
   togglePublication(): void {
