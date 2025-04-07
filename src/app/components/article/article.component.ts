@@ -28,12 +28,13 @@ export class ArticleComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.articleId = Number(params.get('id'));
+      console.log('step 1: recupérer id via ActivatedRoute', this.articleId);
     });
 
-    this.articleSubscription = this.ArticleService.getArticleById(
-      this.articleId
-    ).subscribe((data) => {
+    this.articleSubscription = this.ArticleService.getArticleById(this.articleId).subscribe((data) => {
+      console.log('step2: recupérer data de http client', data);
       this.article = data;
+      console.log('step 3 mettre data dans this.article = ', this.article);
     });
   }
 

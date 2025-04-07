@@ -1,9 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { Article } from '../../../interface/Article';
-import { articles } from '../../data/articles';
 import { ArticlePreviewComponent } from '../../components/article-preview/article-preview.component';
 import { ArticlesService } from '../../services/articles.service';
 import { Subscription } from 'rxjs';
@@ -15,7 +13,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './homePage.component.html',
   styleUrl: './homePage.component.scss',
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit, OnDestroy {
   notificationLike: string = '';
   articles!: (Article | null | undefined)[];
   readonly ArticleService = inject(ArticlesService);
