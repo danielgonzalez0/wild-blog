@@ -8,7 +8,7 @@ import { Article } from '../../interface/Article';
 })
 export class ArticlesService {
   private readonly http = inject(HttpClient);
-  private readonly ARTICLES_URL_API = 'http://localhost:3000/articles';
+  private readonly ARTICLES_URL_API = 'http://localhost:8080/articles';
 
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(this.ARTICLES_URL_API);
