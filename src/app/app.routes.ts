@@ -8,9 +8,10 @@ import { authGuard } from './guards/auth.guard';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { roleGuard } from './guards/role.guard';
 import { visitorOnlyGuard } from './guards/visitor-only.guard';
+import { ProfilComponent } from './pages/profil/profil.component';
 
 export const routes: Routes = [
-  { path: '', component: NotFoundComponent },
+  { path: '', component: HomePageComponent },
   {
     path: 'login',
     component: ConnexionComponent,
@@ -21,7 +22,9 @@ export const routes: Routes = [
     component: AdminPageComponent,
     canActivate: [roleGuard('ROLE_ADMIN')],
   },
-  { path: 'profile', component: HomePageComponent, canActivate: [authGuard] },
+  { path: 'profile', component: ProfilComponent, canActivate: [authGuard] },
+  { path: 'articles', component: HomePageComponent, canActivate: [authGuard] },
+
   { path: 'article/:id', component: ArticleComponent },
   { path: '**', component: NotFoundComponent },
 ];

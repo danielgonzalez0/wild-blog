@@ -1,3 +1,5 @@
+@if (isLoggedIn()) {
+
 <ul class="cards-container">
   @for(article of articles; track article?.id) { @if(article){
   <li class="card">
@@ -10,3 +12,6 @@
   <li>Aucun article</li>
   }
 </ul>
+} @else {
+<app-login-form />
+}

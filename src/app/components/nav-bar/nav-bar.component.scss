@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #2e2e2e;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu,
+.auth,
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.menu a,
+.auth a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #b0b0b0;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.menu a.active,
+.menu a:hover,
+.auth a:hover {
+  color: #00e6c3;
+}
+
+.menu a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #00e6c3;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.user {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: 1px solid #00e6c3;
+}
+
+.username {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+}
+
+.dropdown a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown a:hover {
+  color: #00e6c3;
+}

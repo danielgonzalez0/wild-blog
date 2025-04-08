@@ -12,7 +12,7 @@ export const roleGuard: (expectedRole: string) => CanActivateFn =
 
     if (
       authService.isLoggedIn() &&
-      authService.getUserRole() === expectedRole
+      authService.userRole() === expectedRole
     ) {
       return true;
     } else {

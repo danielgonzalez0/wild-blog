@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="menu">
+    <a routerLink="/articles" routerLinkActive="active">Articles</a>
+
+    @if (isLoggedIn()) {
+    <a routerLink="/profile" routerLinkActive="active">Mon profil</a>
+
+    @if (userRole() === 'ROLE_ADMIN') {
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    } }
+  </div>
+
+  @if (!isLoggedIn()) {
+  <div class="auth">
+    <a routerLink="/login" routerLinkActive="active">Se connecter</a>
+    <a routerLink="/login" routerLinkActive="active">S'inscrire</a>
+  </div>
+  } @else {
+  <div class="user" (click)="toggleDropdown()">
+    <img class="avatar" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar" />
+    <span class="username">Utilisateur</span>
+
+    @if (dropdownOpen()) {
+    <div class="dropdown">
+      <a routerLink="/profile">Profil</a>
+      <a (click)="logout()">Se déconnecter</a>
+    </div>
+    }
+  </div>
+  }
+</nav>
